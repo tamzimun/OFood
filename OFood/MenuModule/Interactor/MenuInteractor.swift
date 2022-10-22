@@ -21,11 +21,9 @@ final class MenuInteractor: MenuInteractorInput {
 
     weak var output: MenuInteractorOutput!
     private var network: Networkable
-    private var coreData = CoreDataManager.shared
     
-    required init(network: Networkable, coreData: CoreDataManager) {
+    required init(network: Networkable) {
         self.network = network
-        self.coreData = coreData
     }
 
     func obtainFoods() {

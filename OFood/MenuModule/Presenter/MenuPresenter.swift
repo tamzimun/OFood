@@ -12,7 +12,6 @@ final class MenuPresenter: MenuViewOutput, MenuInteractorOutput {
     weak var view: MenuViewInput!
     var interactor: MenuInteractorInput!
     var router: MenuRouterInput!
-    private var coreData = CoreDataManager.shared
     
     private var banners: [BannerEntity] = [
         BannerEntity.init(bannerImage: "banner1.png"),

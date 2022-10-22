@@ -16,8 +16,7 @@ final class MenuAssembly {
         let viewController = MenuViewController()
         let presenter = MenuPresenter()
         let network: Networkable = NetworkManager.shared
-        let coreData = CoreDataManager.shared
-        let interactor = MenuInteractor(network: network, coreData: coreData)
+        let interactor = MenuInteractor(network: network)
         let router = MenuRouter()
         
         viewController.menuDataDisplayManager = menuDataDisplayManager
