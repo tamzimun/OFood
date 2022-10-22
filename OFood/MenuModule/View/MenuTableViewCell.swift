@@ -9,14 +9,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-typealias CallBack = () -> Void
-
 class MenuTableViewCell: UITableViewCell {
-    
-    var tableViewIsEmpty: CallBack?
-    
-    // MARK: - UIImageView, UIView, UILabel
-    
     private let foodImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
@@ -25,7 +18,6 @@ class MenuTableViewCell: UITableViewCell {
         image.layer.masksToBounds = true
         return image
     }()
-
 
     private let foodNamelabel: UILabel = {
         let label = UILabel()
@@ -58,14 +50,12 @@ class MenuTableViewCell: UITableViewCell {
         return label
     }()
 
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
      }
 
     // MARK: - Setup Constraints
-
     func configure(with foods: FoodEntity) {
         let url = URL(string: foods.image)
         foodImageView.kf.setImage(with: url)

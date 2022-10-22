@@ -8,7 +8,6 @@
 import UIKit
 
 final class MenuDataDisplayManager: NSObject {
-    
     var categories: [FoodCategoryEntity] = []
     var foods: [FoodEntity] = []
     
@@ -47,13 +46,5 @@ extension MenuDataDisplayManager: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: foods[indexPath.row])
         return cell
     }
-}
-
-extension MenuDataDisplayManager: UIScrollViewDelegate {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-////        let guide = view.safeAreaLayoutGuide
-////        let height = guide.layoutFrame.size.height
-////        if scrollView.contentOffset.y == height -
-//    }
 }
 

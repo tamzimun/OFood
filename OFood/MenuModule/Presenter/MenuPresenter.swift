@@ -8,7 +8,6 @@
 import Foundation
 
 final class MenuPresenter: MenuViewOutput, MenuInteractorOutput {
-    
     weak var view: MenuViewInput!
     var interactor: MenuInteractorInput!
     var router: MenuRouterInput!

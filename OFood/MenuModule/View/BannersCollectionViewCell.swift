@@ -8,7 +8,6 @@
 import UIKit
 
 class BannersCollectionViewCell: UICollectionViewCell {
-    
     private let bannerImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill

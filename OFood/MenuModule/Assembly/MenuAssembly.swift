@@ -8,9 +8,7 @@
 import UIKit
 
 final class MenuAssembly {
-    
     func assemle() -> UIViewController {
-        
         let menuDataDisplayManager = MenuDataDisplayManager()
         let bannerDataDisplayManager = BannerDataDisplayManager()
         let viewController = MenuViewController()

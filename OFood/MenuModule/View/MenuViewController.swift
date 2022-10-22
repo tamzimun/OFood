@@ -25,14 +25,11 @@ protocol MenuViewOutput {
 
 
 class MenuViewController: UIViewController {
-
     var output: MenuViewOutput?
     var menuDataDisplayManager: MenuDataDisplayManager?
     var bannersDataDisplayManager: BannerDataDisplayManager?
-    let screenHeight = UIScreen.main.bounds.height
-    let scrollViewContentHeight = 1200 as CGFloat
     
-    let cityLabel: UILabel = {
+    private let cityLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
         label.text = "Москва"
@@ -194,7 +191,7 @@ extension MenuViewController: MenuViewInput {
         menuDataDisplayManager?.categories = categories
         categoriesCollectionView.reloadData()
         
-        // select first item of collection view, when categories are loaded
+        // selects first item of collection view, when categories are loaded
         let indexPath:IndexPath = IndexPath(row: 0, section: 0)
         categoriesCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
     }
@@ -217,7 +214,6 @@ extension MenuViewController: UIScrollViewDelegate {
             menuTableView.isScrollEnabled = false
             menuTableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         }
-
         bannersCollectionView.transform = CGAffineTransform(translationX: 0, y: max(0, scrollView.contentOffset.y - bannersCollectionView.bounds.maxY - 30))
     }
     

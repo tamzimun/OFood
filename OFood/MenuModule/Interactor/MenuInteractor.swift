@@ -18,7 +18,6 @@ protocol MenuInteractorOutput: AnyObject {
 }
 
 final class MenuInteractor: MenuInteractorInput {
-
     weak var output: MenuInteractorOutput!
     private var network: Networkable
     

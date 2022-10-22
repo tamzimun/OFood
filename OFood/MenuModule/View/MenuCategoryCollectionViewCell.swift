@@ -8,7 +8,6 @@
 import UIKit
 
 class MenuCategoryCollectionViewCell: UICollectionViewCell {
-    
     override var isSelected: Bool {
         didSet {
             containerView.layer.backgroundColor = isSelected ? #colorLiteral(red: 0.961158812, green: 0.8141586185, blue: 0.8644768596, alpha: 1) : #colorLiteral(red: 0.9511644244, green: 0.9611129165, blue: 0.9738450646, alpha: 1)
@@ -17,7 +16,7 @@ class MenuCategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    let containerView: UIView = {
+    private let containerView: UIView = {
         let container = UIView()
         container.layer.borderWidth = 1
         container.layer.borderColor = #colorLiteral(red: 0.961158812, green: 0.8141586185, blue: 0.8644768596, alpha: 1)
@@ -25,7 +24,7 @@ class MenuCategoryCollectionViewCell: UICollectionViewCell {
         return container
     }()
     
-    let categorylabel: UILabel = {
+    private let categorylabel: UILabel = {
         let label = UILabel()
         label.textColor = #colorLiteral(red: 0.9651088119, green: 0.6697539687, blue: 0.7543472648, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 13)
@@ -49,7 +48,7 @@ class MenuCategoryCollectionViewCell: UICollectionViewCell {
         containerView.snp.makeConstraints { make in
             make.top.left.right.bottom.equalTo(contentView)
         }
-        
+
         containerView.addSubview(categorylabel)
         categorylabel.snp.makeConstraints { make in
             make.top.equalTo(containerView.snp.top).offset(8)
