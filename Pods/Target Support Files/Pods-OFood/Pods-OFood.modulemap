@@ -1,0 +1,6 @@
+framework module Pods_OFood {
+  umbrella header "Pods-OFood-umbrella.h"
+
+  export *
+  module * { export * }
+}
