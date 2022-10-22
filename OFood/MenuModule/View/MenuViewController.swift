@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HGPlaceholders
 
 enum Constants {
     static let bannerAndCategoryCollectionViewHeight: CGFloat = 260.0
@@ -85,8 +86,8 @@ class MenuViewController: UIViewController {
         return collection
     }()
     
-    private let menuTableView: UITableView = {
-        let table = UITableView()
+    private let menuTableView: TableView = {
+        let table = TableView()
         table.register(MenuTableViewCell.self, forCellReuseIdentifier: "MenuTableViewCell")
         table.showsVerticalScrollIndicator = false
         table.backgroundColor = .clear
@@ -111,6 +112,7 @@ class MenuViewController: UIViewController {
         bannersCollectionView.dataSource = bannersDataDisplayManager
         menuTableView.delegate = menuDataDisplayManager
         menuTableView.dataSource = menuDataDisplayManager
+        menuTableView.showLoadingPlaceholder()
         scrollView.delegate = self
         
         menuDataDisplayManager?.onCategoryDidSelect = { [ weak self] category in
@@ -202,8 +204,10 @@ extension MenuViewController: MenuViewInput {
     }
     
     func handleObtainedFilteredFoods(_ foodsId: Int) {
-        let indexPath = NSIndexPath(row: foodsId - 1, section: 0)
-        menuTableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        if foodsId > 0 {
+            let indexPath = NSIndexPath(row: foodsId - 1, section: 0)
+            menuTableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        }
     }
 }
 

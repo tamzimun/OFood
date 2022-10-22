@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-OFood-OFoodUITests/Pods-OFood-OFoodUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/HGPlaceholders/HGPlaceholders.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

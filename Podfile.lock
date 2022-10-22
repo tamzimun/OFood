@@ -1,24 +1,28 @@
 PODS:
+  - HGPlaceholders (0.5.0)
   - Kingfisher (7.4.0)
   - SkeletonView (1.30.3)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - HGPlaceholders
   - Kingfisher (~> 7.0)
   - SkeletonView
   - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
   trunk:
+    - HGPlaceholders
     - Kingfisher
     - SkeletonView
     - SnapKit
 
 SPEC CHECKSUMS:
+  HGPlaceholders: cbf8caed8360fc2ab5e8a4610cce61f76fbd2c37
   Kingfisher: 596b207973051aae5e4c54a1c1cb39837ea10d36
   SkeletonView: f5b099c708e42a278079a12bcaaf71c303be65a3
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 42ed54afd24cd982a1f1e5d8e7893f1aadfb6d4b
+PODFILE CHECKSUM: f3d2bc3a9f045b266d864f3efccf2a93a64e310e
 
 COCOAPODS: 1.11.3

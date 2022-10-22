@@ -18,5 +18,6 @@ target 'OFood' do
   pod 'Kingfisher', '~> 7.0'
   pod 'SnapKit', '~> 5.6.0'
   pod "SkeletonView"
+  pod 'HGPlaceholders'
 
 end
