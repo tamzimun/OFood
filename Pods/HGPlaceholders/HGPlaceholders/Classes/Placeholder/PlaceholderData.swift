@@ -40,8 +40,8 @@ public struct PlaceholderData {
     public static var noResults: PlaceholderData {
         var noResultsStyle = PlaceholderData()
         noResultsStyle.image = PlaceholdersProvider.image(named: "hg_default-no_results")
-        noResultsStyle.title = NSLocalizedString("No results founds", comment: "")
-        noResultsStyle.subtitle = NSLocalizedString("We can’t find what\nyou’re looking for.", comment: "")
+        noResultsStyle.title = NSLocalizedString("Пусто", comment: "")
+        noResultsStyle.subtitle = NSLocalizedString("Ничего не найдено.", comment: "")
         
         return noResultsStyle
     }
@@ -50,9 +50,8 @@ public struct PlaceholderData {
     public static var loading: PlaceholderData {
         var loadingStyle = PlaceholderData()
         loadingStyle.image = PlaceholdersProvider.image(named: "hg_default-loading")
-        loadingStyle.title = NSLocalizedString("Loading...", comment: "")
-        loadingStyle.action = NSLocalizedString("Cancel", comment: "")
-        loadingStyle.subtitle = NSLocalizedString("The bits are flowing\nslowly today", comment: "")
+        loadingStyle.title = NSLocalizedString("Загрузка...", comment: "")
+        loadingStyle.subtitle = NSLocalizedString("Интернет сегодня медленный", comment: "")
         loadingStyle.showsLoading = true
         
         return loadingStyle
