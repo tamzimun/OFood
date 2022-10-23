@@ -66,10 +66,11 @@ class MenuViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
-    
+        
         var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(BannersCollectionViewCell.self, forCellWithReuseIdentifier: "BannersCollectionViewCell")
         collection.showsHorizontalScrollIndicator = false
+        collection.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         collection.backgroundColor = .clear
         return collection
     }()
@@ -78,11 +79,12 @@ class MenuViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
-    
+        
         var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(MenuCategoryCollectionViewCell.self, forCellWithReuseIdentifier: "MenuCategoryCollectionViewCell")
         collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = .clear
+        collection.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         return collection
     }()
     
@@ -140,11 +142,7 @@ class MenuViewController: UIViewController {
         }
 
         view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { make in
-            make.centerY.equalTo(view.safeAreaLayoutGuide.snp.centerY).priority(.low)
-            make.height.equalTo(view.safeAreaLayoutGuide.snp.height).priority(.low)
-            make.centerX.equalTo(view.safeAreaLayoutGuide.snp.centerX)
-            make.top.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
+        scrollView.snp.makeConstraints { make in            make.top.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
         }
 
         scrollView.addSubview(containerView)
@@ -159,7 +157,7 @@ class MenuViewController: UIViewController {
         scrollView.addSubview(bannersCollectionView)
         bannersCollectionView.snp.makeConstraints { make in
             make.top.equalTo(scrollView.contentInset.top).offset(24)
-            make.left.equalTo(scrollView.contentInset.left).offset(16)
+            make.left.equalTo(scrollView.contentInset.left)
             make.right.equalTo(scrollView.contentInset.right)
             make.height.equalTo(112)
             make.width.equalTo(300)
@@ -168,7 +166,7 @@ class MenuViewController: UIViewController {
         scrollView.addSubview(categoriesCollectionView)
         categoriesCollectionView.snp.makeConstraints { make in
             make.top.equalTo(bannersCollectionView.snp.bottom).offset(24)
-            make.left.equalTo(bannersCollectionView.snp.left)
+            make.left.equalTo(scrollView.contentInset.left)
             make.right.equalTo(bannersCollectionView.snp.right)
             make.height.equalTo(32)
         }
