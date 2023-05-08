@@ -2,7 +2,7 @@
 //  MenuViewController.swift
 //  OFood
 //
-//  Created by Aida on 18.10.2022.
+//  Created by tamzimun on 18.10.2022.
 //
 
 import UIKit
@@ -35,14 +35,12 @@ class MenuViewController: UIViewController {
         label.textColor = UIColor.black
         label.text = "Москва"
         label.font = UIFont.boldSystemFont(ofSize: 17.0)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let arrowImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
-        image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.masksToBounds = true
         image.image = UIImage(named: "arrow.png")
         return image
@@ -50,7 +48,6 @@ class MenuViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
         let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.showsVerticalScrollIndicator = false
         view.bounces = false
         return view
@@ -58,7 +55,6 @@ class MenuViewController: UIViewController {
     
     private let containerView: UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     

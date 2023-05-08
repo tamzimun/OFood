@@ -2,7 +2,7 @@
 //  OFoodUITests.swift
 //  OFoodUITests
 //
-//  Created by Aida on 18.10.2022.
+//  Created by tamzimun on 18.10.2022.
 //
 
 import XCTest
